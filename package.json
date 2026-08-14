@@ -12,8 +12,13 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@fortawesome/react-fontawesome": "^3.5.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "react-fontawesome": "^1.7.1",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "^7.18.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
