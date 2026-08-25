@@ -1,5 +1,6 @@
 #bar {
   display: flex;
+  color: #40FEFE;
 }
 
 .header {
@@ -329,7 +330,7 @@
 }
 
 .nav-link.active {
-  color: #2056AE;
+  color: #40fefee1;
 }
 
 .nav-link.active::after {
@@ -339,11 +340,11 @@
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: #2056AE;
+  background: #40fefee1;
 }
 
 .active-machine {
-  color: #2056AE;
+  color: #40fefee1;
   position: relative;
 }
 
@@ -354,5 +355,5 @@
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: #2056AE;
+  background: #40fefee1;
 }

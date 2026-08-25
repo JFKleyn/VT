@@ -1,0 +1,36 @@
+.about-container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  padding: 100px 32px 200px 32px;
+
+}
+
+h2{
+  color: white;
+  font-weight: 600;
+}
+
+.about-container p{
+  max-width: 640px;
+  text-align: center;
+  color: #ACACAC;
+}
+
+.about-container span{
+  color: #40FEFE;
+}
+
+@media (min-width:1024px) {
+  .about-container p{
+  max-width: 900px;
+  }
+
+  .about-container{
+    margin-top: 100px;
+
+    margin-bottom: 80px;
+  }
+}

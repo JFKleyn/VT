@@ -55,14 +55,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
 .hero-header span{
-  color: #377EF0;
+  color: #40fefee1;
 }
 
-.hero-header p{
+.hero-p{
   color: rgb(182, 182, 182);
 }
 
@@ -74,9 +74,16 @@
   width: 100%;
 }
 
+.hero-buttons a{
+  display: flex;
+  justify-content: center;
+}
+
 .hero-buttons button{
-  padding: 18px 24px;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .product-button{
@@ -163,4 +170,14 @@
   flex-direction: row;
   justify-content: center;
 }
+
+.hero-buttons button{
+  width: 400px;
+  padding: 20px;
+}
+}
+
+small{
+  font-size: 10px;
+  color: #636363;
 }

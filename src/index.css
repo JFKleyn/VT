@@ -5,7 +5,7 @@ html{
 
 body{
   overflow-x: hidden;
-  background-color: #0A0A0A;
+  background-color: #000000;
 }
 
 *{
@@ -55,11 +55,12 @@ a{
 
 button{
   cursor: pointer;
-  border: 1px solid #40FEFE;
+  border: 1px solid #40fefee1;
   background: none;
-  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-size: clamp(1rem, 1.2vw, 1.4rem);
+  font-weight: 600;
   color: rgb(255, 255, 255);  
-  background-color: #40FEFE;
+  background-color: #40fefee1;
   padding: 10px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -72,8 +73,8 @@ button p{
 
 button:hover{
   border: 1px solid #ffffff;
-  background-color: #030a68;
-  scale: 1.025;
+  background-color: transparent;
+  scale: 1.01;
 }
 
 a {

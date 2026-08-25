@@ -1,0 +1,123 @@
+.footer{
+  display: grid;
+}
+
+.footer-icon{
+  color: #40fefee1;
+  height: 24px;
+  width: 24px;
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover{
+  color: #ffffff;
+}
+
+.footer-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px 20px 30px 20px;
+  gap: 32px;
+}
+
+.footer-content h4{
+  margin-bottom: 10px;
+  color: #40fefee1;
+}
+
+.footer-content p{
+  text-align: left;
+}
+
+.footer-content2{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: left;
+}
+
+.footer-content2 p{
+  text-align: left;
+  max-width: 400px;
+}
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.social-icons{
+  display: flex;
+  gap: 8px;
+}
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.copy{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid rgba(16, 16, 16, 0.169);
+  padding: 10px 0px;
+  margin: 0 20px;
+}
+
+.footer-content2 p{
+  color: white;
+}
+
+.copy small{
+  color: #636363;
+  font-size: 12px;
+  text-align: left;
+}
+
+.copy a{
+  text-decoration: none;
+  color: #636363;
+  font-size: 12px;
+  text-align: left;
+}
+
+.companydocs{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item span{
+  color: white;
+}
+
+@media (min-width: 768px){
+
+  .footer{
+    margin: 20px 20px 0px 20px;
+  }
+
+  .copy{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .companydocs{
+  flex-direction: row;
+  gap: 20px;
+}
+
+
+}
+
+@media (min-width: 1024px){
+
+  .footer-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}

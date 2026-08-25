@@ -86,7 +86,6 @@ export function Header() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/services">Services</Link>
-        <Link to="/compliance">Compliance</Link>
         <Link to="/contact">Contact</Link>
       </div>
     </>
