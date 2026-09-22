@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(150px, 16vw, 245px) max(6vw, 24px) 70px;
+  padding: clamp(150px, 16vw, 180px) max(6vw, 24px) 70px;
   color: #fff;
   background:
     radial-gradient(
@@ -26,17 +26,6 @@
       transparent 27%
     ),
     #050909;
-}
-.work-page__hero:after {
-  content: "";
-  position: absolute;
-  width: min(44vw, 690px);
-  aspect-ratio: 1;
-  right: -10%;
-  top: 18%;
-  border: 1px solid rgba(64, 254, 254, 0.12);
-  border-radius: 50%;
-  box-shadow: inset 0 0 0 10vw rgba(64, 254, 254, 0.012);
 }
 .work-page__kicker,
 .work-page__section-label {
@@ -293,7 +282,7 @@
   font-size: clamp(2.8rem, 4.8vw, 6rem);
   font-weight: 500;
   letter-spacing: -0.068em;
-  line-height: 0.91;
+  line-height: 1;
   text-align: left;
 }
 .portfolio-project__description {
@@ -413,6 +402,17 @@
     transform: translateY(7px);
   }
 }
+@keyframes workOrbitPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.025);
+    opacity: 1;
+  }
+}
 @media (max-width: 1000px) {
   .portfolio-project,
   .portfolio-project.is-reversed {
@@ -437,6 +437,11 @@
   }
   .work-page__hero:after {
     width: 75vw;
+    right: -28%;
+  }
+  .work-page__hero:before {
+    width: 34vw;
+    right: -5%;
   }
 }
 @media (max-width: 650px) {
@@ -454,6 +459,16 @@
   }
   .work-page__scroll {
     display: none;
+  }
+  .work-page__hero::after {
+    width: 92vw;
+    right: -48%;
+    top: 24%;
+  }
+  .work-page__hero::before {
+    width: 48vw;
+    right: -22%;
+    top: 38%;
   }
   .work-page__projects {
     padding-left: 22px;

@@ -23,7 +23,7 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(300px, 1.35fr) minmax(190px, .65fr) minmax(280px, 1fr);
+  grid-template-columns: minmax(300px, 1fr) minmax(190px, .90fr) minmax(280px, 1.10fr);
   gap: clamp(55px, 8vw, 150px);
   padding-bottom: clamp(90px, 10vw, 40px);
 }

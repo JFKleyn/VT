@@ -16,7 +16,7 @@ const projects = [
     client: "KZN Machine Tool Solution Centre",
     title: "More than a website. A complete machine management platform.",
     description:
-      "An industrial website backed by custom administration software—giving the MCSS team control over machines, specifications, availability and imagery.",
+      "An industrial website backed by custom administration software giving the MCSS team control over machines, specifications, availability and imagery.",
     services: ["Web design", "Custom software", "CMS", "Cloud infrastructure"],
     image: mcss,
     url: "https://www.kznmts.co.za",
@@ -43,7 +43,7 @@ const projects = [
       "A refined, responsive website built to give Studio Amberleigh’s work the space, clarity and visual confidence it deserves.",
     services: ["Web design", "Development", "Responsive UX"],
     image: sa,
-    url: "https://studioamberleigh.co.za", 
+    url: "https://studioamberleigh.co.za",
     year: "2026",
     tone: "amberley",
   },
@@ -55,7 +55,7 @@ const projects = [
       "A friendly digital experience designed to organise educational information and help families find what they need without friction.",
     services: ["Web design", "Development", "Content structure"],
     image: ltl,
-    url: "ltlprivatetutoring.co.za", 
+    url: "ltlprivatetutoring.co.za",
     year: "2026",
     tone: "learn",
   },
@@ -140,7 +140,7 @@ function Project({ project, index }) {
 export function WorkPage() {
   return (
     <>
-    <Header />
+      <Header />
       <main className="work-page">
         <section className="work-page__hero">
           <Reveal className="work-page__kicker">
@@ -165,15 +165,16 @@ export function WorkPage() {
               <span>Delivery</span>
             </Reveal>
           </div>
-          <span className="work-page__scroll">
-            Scroll to explore <i>↓</i>
-          </span>
+          <div className="about-hero__system" aria-hidden="true">
+            <span>V</span>
+            <i />
+            <i />
+            <b>BUILD / SOLVE / IMPROVE</b>
+          </div>
         </section>
 
         <section className="work-page__projects">
-          <Reveal className="work-page__section-label">
-            <span>01</span>Project archive
-          </Reveal>
+          <Reveal className="work-page__section-label">Project archive</Reveal>
           <div className="work-page__project-list">
             {projects.map((project, index) => (
               <Project project={project} index={index} key={project.number} />
@@ -182,9 +183,7 @@ export function WorkPage() {
         </section>
 
         <section className="work-page__more">
-          <Reveal className="work-page__section-label">
-            <span>02</span>The next project
-          </Reveal>
+          <Reveal className="work-page__section-label">The next project</Reveal>
           <Reveal as="h2" direction="up">
             The archive is growing.
             <br />

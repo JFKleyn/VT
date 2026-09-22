@@ -65,10 +65,14 @@
   animation: statusPulse 2s ease-in-out infinite;
 }
 .venture-hero__title {
-  margin: 0;
-  color: var(--white);
-  font: 500 clamp(3.25rem, 6.7vw, 8.25rem)/0.84 inherit;
-  letter-spacing: -0.075em;
+  position: relative;
+  z-index: 1;
+  margin: 70px 0;
+  color: #fff;
+  font-size: clamp(3rem, 70vw, 8.4rem);
+  font-weight: 500;
+  letter-spacing: -0.08em;
+  line-height: 1;
   text-align: left;
 }
 .venture-hero__title > span {
@@ -92,7 +96,7 @@
 }
 .venture-hero__signal {
   flex: 1;
-  max-width: 210px;
+  max-width: 300px;
   display: flex;
   align-items: center;
   gap: 7px;

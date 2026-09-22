@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: clamp(150px, 16vw, 245px) max(6vw, 24px) 70px;
+  padding: clamp(150px, 16vw, 180px) max(6vw, 24px) 70px;
   background:
     radial-gradient(
       circle at 80% 42%,
@@ -58,7 +58,7 @@
   font-size: clamp(4.2rem, 8.8vw, 10.7rem);
   font-weight: 500;
   letter-spacing: -0.08em;
-  line-height: 0.82;
+  line-height: 1;
   text-align: left;
 }
 .about-hero h1 em {
@@ -202,7 +202,7 @@
   font-size: clamp(3.4rem, 6vw, 7.3rem);
   font-weight: 500;
   letter-spacing: -0.073em;
-  line-height: 0.87;
+  line-height: 1;
   text-align: left;
 }
 .about-founder h2 em,
@@ -421,7 +421,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.13);
 }
 .about-now__services span {
-  padding: 15px 0;
+  padding: 15px 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.48);
   font-size: 0.64rem;

@@ -195,7 +195,7 @@ export function ServicesPage() {
 
         <section className="services-system">
           <Reveal className="services-section-label">
-            <span>01</span>What we build
+What we build
           </Reveal>
           <div className="services-system__grid">
             <div className="services-list">

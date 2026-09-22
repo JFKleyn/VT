@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Reveal } from "../../components/Reveal";
 import { Footer } from "../../components/Footer";
-import founder from "../../assets/about/johan-kleyn.webp"
+import { Header } from "../../components/Header";
+import founder from "../../assets/about/johan-kleyn.webp";
 import "./AboutPage.css";
 
 const principles = [
@@ -38,6 +39,7 @@ function Arrow() {
 export function AboutPage() {
   return (
     <>
+      <Header />
       <main className="about-page">
         <section className="about-hero">
           <Reveal className="about-label">
@@ -76,7 +78,6 @@ export function AboutPage() {
                 src={founder}
                 alt="Johan Kleyn, founder of Venture Technologies"
               />
-              <span className="about-founder__scan" aria-hidden="true" />
               <div className="about-founder__photo-meta">
                 <span>Founder / Developer</span>
                 <span>Johan Kleyn</span>
@@ -85,7 +86,7 @@ export function AboutPage() {
           </div>
           <div className="about-founder__story">
             <Reveal className="about-section-label">
-              <span>01</span>The person behind Venture
+              The person behind Venture
             </Reveal>
             <Reveal as="h2" direction="up">
               Close to the problem.
@@ -94,7 +95,7 @@ export function AboutPage() {
             </Reveal>
             <Reveal as="p" delay={100}>
               I’m Johan Kleyn, the founder and developer behind Venture. My
-              background began close to the operational side of business—working
+              background began close to the operational side of business working
               with databases, reporting, spreadsheets and internal systems.
             </Reveal>
             <Reveal as="p" delay={150}>
@@ -111,9 +112,7 @@ export function AboutPage() {
         </section>
 
         <section className="about-evolution">
-          <Reveal className="about-section-label">
-            <span>02</span>The evolution
-          </Reveal>
+          <Reveal className="about-section-label">The evolution</Reveal>
           <div className="about-evolution__heading">
             <Reveal as="h2" direction="up">
               From internal systems
@@ -128,7 +127,6 @@ export function AboutPage() {
           </div>
           <div className="about-evolution__track">
             <Reveal as="article">
-              <span>01</span>
               <small>The foundation</small>
               <h3>Business systems</h3>
               <p>
@@ -137,7 +135,6 @@ export function AboutPage() {
               </p>
             </Reveal>
             <Reveal as="article" delay={70}>
-              <span>02</span>
               <small>The beginning</small>
               <h3>Web experiences</h3>
               <p>
@@ -146,7 +143,6 @@ export function AboutPage() {
               </p>
             </Reveal>
             <Reveal as="article" delay={140}>
-              <span>03</span>
               <small>The expansion</small>
               <h3>Digital products</h3>
               <p>
@@ -168,9 +164,7 @@ export function AboutPage() {
 
         <section className="about-principles">
           <div className="about-principles__intro">
-            <Reveal className="about-section-label">
-              <span>03</span>Working principles
-            </Reveal>
+            <Reveal className="about-section-label">Working principles</Reveal>
             <Reveal as="h2" direction="up">
               A small company
               <br />
@@ -194,9 +188,7 @@ export function AboutPage() {
         </section>
 
         <section className="about-now">
-          <Reveal className="about-section-label">
-            <span>04</span>Venture today
-          </Reveal>
+          <Reveal className="about-section-label">Venture today</Reveal>
           <Reveal as="h2" direction="up">
             Based in South Africa.
             <br />

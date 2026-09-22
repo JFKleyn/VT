@@ -10,8 +10,9 @@ import "./Footer.css";
 import Logo from "../assets/Logo.webp";
 
 const navigation = [
-  { label: "Work", to: "/#work" },
+  { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
+  { label: "Work", to: "/#work" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
 ];
