@@ -1,78 +1,98 @@
-
-import { Header } from "../../components/Header";
 import { Link } from "react-router-dom";
-import Hero from "../../assets/Venture-Hero.webp";
+import { Header } from "../../components/Header";
 import "./HomeHero.css";
 
-
+const Arrow = () => (
+  <svg viewBox="0 0 20 20" aria-hidden="true">
+    <path d="M5 15 15 5M7 5h8v8" />
+  </svg>
+);
+const capabilities = ["Websites", "Software", "Mobile apps", "Automations"];
 
 export function HomeHero() {
-
-
   return (
     <>
       <Header />
-      <div className="hero" style={{ backgroundImage: `url(${Hero})`,
-      backgroundSize: "cover",
-      backgroundPosition: "right",
-      backgroundRepeat: "no-repeat" }}>
-        <div className="hero-overlay"></div>
-
-        <div className="hero-header">
-
-          <h1 className="hero-line">
-            Whatever the <span>Problem,</span><br />
-            We'll Find the <span>Solution.</span>
-          </h1>
-
-          <p className=" hero-p hero-line">
-            We design and develop custom software, websites, mobile applications, and automations that solve real business problems and help companies work smarter and grow.
-          </p>
-          <small class="hero-line">
-      Based in South Africa • Working Globally 
-    </small>
-
-          <div className="hero-buttons">
-            <Link to="/contact">
-              <button>
-                <p>Book a Consultation</p>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z" fill="white" />
-              </svg>
-              </button>
-            </Link>
+      <main className="venture-hero">
+        <div className="venture-hero__grid" aria-hidden="true" />
+        <div className="venture-hero__glow" aria-hidden="true" />
+        <section className="venture-hero__content">
+          <div className="venture-hero__eyebrow hero-reveal">
+            <span className="venture-hero__status" />
+            Independent Technology Company · South Africa / Worldwide
           </div>
+          <h1 className="venture-hero__title">
+            <span className="hero-reveal">Whatever the</span>
+            <span className="hero-reveal venture-hero__title-row">
+              <em>problem,</em>
+              <span className="venture-hero__signal" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+              </span>
+            </span>
+            <span className="hero-reveal venture-hero__title-last">
+              we build the <strong>solution.</strong>
+            </span>
+          </h1>
+          <div className="venture-hero__lower hero-reveal">
+            <p>
+              Venture turns ambitious ideas and stubborn business problems into
+              beautifully engineered digital products.
+            </p>
+            <div className="venture-hero__actions">
+              <Link className="venture-hero__primary" to="/contact">
+                Start a project <Arrow />
+              </Link>
+              <a className="venture-hero__secondary" href="#selected-work">
+                Explore our work <span>↓</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <aside
+          className="solution-system hero-reveal"
+          aria-label="Venture capabilities"
+        >
+          <div className="solution-system__head">
+            <span>Venture / Solution system</span>
+            <span className="solution-system__live">Live</span>
+          </div>
+          <div className="solution-system__core" aria-hidden="true">
+            <span className="solution-system__orbit solution-system__orbit--one" />
+            <span className="solution-system__orbit solution-system__orbit--two" />
+            <div className="solution-system__mark">
+              <b>V</b>
+            </div>
+            <span className="solution-system__pulse" />
+          </div>
+          <div className="solution-system__flow">
+            <span>Business problem</span>
+            <i />
+            <strong>Digital solution</strong>
+          </div>
+          <div className="solution-system__capabilities">
+            {capabilities.map((item, i) => (
+              <span key={item}>
+                <small>0{i + 1}</small>
+                {item}
+              </span>
+            ))}
+          </div>
+        </aside>
+        <div
+          className="venture-hero__edge venture-hero__edge--left"
+          aria-hidden="true"
+        >
+          VT / 2026
         </div>
-      </div>
-      {/* <div className="hero-container">
-    <h1>
-      <span className="hero-line">Premium Web Design &</span>
-      <span className="hero-line">Web Development That</span>
-      <span className="hero-line accent">Converts</span>
-    </h1>
-    <p className="hero-line">
-      We design and develop premium custom websites for businesses in Durban and across South Africa, combining strategy, modern technology, and exceptional design.
-    </p>
-    <small className="hero-line">
-      Based in South Africa • Working Globally 
-    </small>
-    <div className="btn-container">
-      <div className="hero-line hero-btn-wrap">
-    <a href="contact/index.html" className="btn">
-      Book a Consultation
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-        <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/>
-      </svg>
-    </a>
-  </div>
-       <button className="btn odd hero-line"> 
-         View Our Work 
-         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.<path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/></svg> 
-       </button> 
-    </div> */}
-    {/* <div className="diamond one"></div>
-    <div className="diamond two"></div>
-  </div> */}
+        <div
+          className="venture-hero__edge venture-hero__edge--right"
+          aria-hidden="true"
+        >
+          SCROLL TO DISCOVER
+        </div>
+      </main>
     </>
   );
 }

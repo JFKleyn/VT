@@ -1,75 +1,88 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebook,
+  faFacebookF,
   faInstagram,
-  faLinkedin,
+  faLinkedinIn,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faPhone,
-  faEnvelope,
-} from "@fortawesome/free-solid-svg-icons";
 import "./Footer.css";
 import Logo from "../assets/Logo.webp";
 
+const navigation = [
+  { label: "Work", to: "/#work" },
+  { label: "Services", to: "/services" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+];
+
+const socialLinks = [
+  { label: "Instagram", href: "https://www.instagram.com/venturetechnologies.co/", icon: faInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/venture-technologies-co/?viewAsMember=true", icon: faLinkedinIn },
+  { label: "Facebook", href: "https://www.facebook.com/share/18wJcobAmZ/?mibextid=wwXIfr", icon: faFacebookF },
+  { label: "WhatsApp", href: "https://wa.me/27814605994", icon: faWhatsapp },
+];
+
+function Arrow() {
+  return <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" /></svg>;
+}
+
 export function Footer() {
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+
   return (
-    <>
-      <div className="footer">
-        <div className="footer-container">
-          <div className="footer-content2">
-            <img src={Logo} alt="Logo2" className="logo" />
-            <p>Building premium digital experiences for forward-thinking businesses. Strategic. Scalable. Built to last.</p>
-            <div className="social-icons">
-              <a href="https://www.facebook.com/share/18wJcobAmZ/?mibextid=wwXIfr" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon className="footer-icon" icon={faFacebook} />
-              </a>
-
-              <a href="https://www.instagram.com/venturetechnologies.co/" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon className="footer-icon" icon={faInstagram} />
-              </a>
-
-              <a href="https://www.linkedin.com/company/venture-technologies-co/?viewAsMember=true" target="_blank" rel="noreferrer">
-                <FontAwesomeIcon className="footer-icon" icon={faLinkedin} />
-              </a>
-
-              <a
-                href="https://wa.me/27814605994"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon className="footer-icon" icon={faWhatsapp} />
-              </a>
-            </div>
-          </div>
-          <div className="footer-content">
-            <h4>Quick Links</h4>
-            <Link to={"/about"}>About</Link>
-            <Link to={"/services"}>Services</Link>
-            <Link to={"/contact"}>Contact</Link>
-          </div>
-          <div className="footer-content">
-            <h4>Contact</h4>
-            <div className="contact-item">
-              <FontAwesomeIcon className="footer-icon" icon={faPhone} />
-              <span>+27 81 460 5994</span>
-            </div>
-            <div className="contact-item">
-              <FontAwesomeIcon className="footer-icon" icon={faEnvelope} />
-              <span>johan@venturetechnologies.co</span>
-            </div>
-          </div>
+    <footer className="site-footer">
+      <div className="site-footer__top">
+        <div className="site-footer__brand">
+          <Link to="/" aria-label="Venture Technologies home">
+            <img src={Logo} alt="Venture Technologies" />
+          </Link>
+          <p>
+            A South African technology company building websites, software,
+            applications and automations for businesses everywhere.
+          </p>
+          <span className="site-footer__status"><i />Available for selected projects</span>
         </div>
-        <div className="copy">
-          <div className="company">
-            <small>
-              © 2026 Venture Technologies | All right
-              reserved
-            </small>
+
+        <div className="site-footer__column">
+          <span className="site-footer__heading">Explore</span>
+          <nav aria-label="Footer navigation">
+            {navigation.map((item, index) => (
+              <Link to={item.to} key={item.label}>
+                <small>0{index + 1}</small>
+                <span>{item.label}</span>
+                <Arrow />
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <div className="site-footer__column site-footer__contact">
+          <span className="site-footer__heading">Start a conversation</span>
+          <a className="site-footer__email" href="mailto:johan@venturetechnologies.co">
+            johan@venturetechnologies.co <Arrow />
+          </a>
+          <a className="site-footer__phone" href="tel:+27814605994">+27 81 460 5994</a>
+
+          <div className="site-footer__socials">
+            {socialLinks.map((item) => (
+              <a href={item.href} target="_blank" rel="noreferrer" key={item.label}>
+                <span className="site-footer__social-icon">
+                  <FontAwesomeIcon icon={item.icon} />
+                </span>
+                <span>{item.label}</span>
+                <Arrow />
+              </a>
+            ))}
           </div>
         </div>
       </div>
-    </>
+
+      <div className="site-footer__bottom">
+        <span>© {new Date().getFullYear()} Venture Technologies. All rights reserved.</span>
+        <span>South Africa / Worldwide</span>
+        <button type="button" onClick={scrollToTop}>Back to top <span>↑</span></button>
+      </div>
+    </footer>
   );
 }

@@ -1,93 +1,124 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/Logo.webp";
 import "./Header.css";
 
-export function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+const links = [
+  ["Services", "/services"],
+  ["Work", "/work"],
+  ["About", "/about"],
+  ["Contact", "/contact"],
+];
 
+function Arrow() {
+  return (
+    <svg viewBox="0 0 20 20" aria-hidden="true">
+      <path d="M5 15 15 5M7 5h8v8" />
+    </svg>
+  );
+}
+
+export function Header() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 24);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
 
-  function toggleMenu() {
-    setMenuOpen(!menuOpen);
-  }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   function closeMenu() {
-    setMenuOpen(false);
+    setOpen(false);
   }
 
   return (
-    <>
-      <div className={`header ${scrolled ? "scrolled" : ""}`}>
-        <img src={logo} alt="Logo" className="logo" />
-        <div className="navigation">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            Home
-          </NavLink>
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            About
-          </NavLink>
-          <NavLink
-            to="/services"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            Services
-          </NavLink>
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            Contact
-          </NavLink>
-        </div>
-        <div className="header-buttons">
-          <Link to="/contact">
-            <button>GET A QUOTE</button>
-          </Link>
-        </div>
-        <FontAwesomeIcon
-          icon={faBars}
-          className="FontawesomeIcon"
-          id="bar"
-          onClick={toggleMenu}
-        />
-      </div>
-      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <FontAwesomeIcon icon={faXmark} onClick={closeMenu} id="xmark" />
+    <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
+      <div className="site-header__inner">
+        <Link
+          className="site-header__brand"
+          to="/"
+          aria-label="Venture home"
+          onClick={closeMenu}
+        >
+          <img src={logo} alt="Venture" />
+        </Link>
 
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/services">Services</Link>
-        <Link to="/contact">Contact</Link>
+        <nav className="site-header__nav" aria-label="Main navigation">
+          {links.map(([label, to]) => (
+            <NavLink
+              key={to}
+              to={to}
+              end={to === "/"}
+              className={({ isActive }) =>
+                `site-header__link${isActive ? " is-active" : ""}`
+              }
+            >
+              {label}
+            </NavLink>
+          ))}
+        </nav>
+
+        <Link className="site-header__cta" to="/contact">
+          Start a project
+          <Arrow />
+        </Link>
+
+        <button
+          className={`menu-toggle ${open ? "is-open" : ""}`}
+          type="button"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="venture-mobile-menu"
+          onClick={() => setOpen((current) => !current)}
+        >
+          <span />
+          <span />
+        </button>
       </div>
-    </>
+
+      <div
+        id="venture-mobile-menu"
+        className={`mobile-menu ${open ? "is-open" : ""}`}
+        aria-hidden={!open}
+      >
+        <nav aria-label="Mobile navigation">
+          {links.map(([label, to], index) => (
+            <NavLink key={to} to={to} end={to === "/"} onClick={closeMenu}>
+              <span>0{index + 1}</span>
+              {label}
+            </NavLink>
+          ))}
+
+          <Link className="mobile-menu__cta" to="/contact" onClick={closeMenu}>
+            Start a project
+            <Arrow />
+          </Link>
+        </nav>
+
+        <div className="mobile-menu__footer">
+          <span>Durban, South Africa</span>
+          <span>Working worldwide</span>
+        </div>
+      </div>
+    </header>
   );
 }

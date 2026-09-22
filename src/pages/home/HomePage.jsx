@@ -1,18 +1,18 @@
-import { HomeAbout } from "./HomeAbout";
 import { HomeHero } from "./HomeHero";
-import { HomeServices } from "./HomeServices";
-import { HomeWhy } from "./HomeWhy";
+import { HomeWork } from "./HomeWork";
+import { HomeCapabilities } from "./HomeCapabilities";
+import { HomeProblem } from "./HomeProblem";
+import { Footer } from "../../components/Footer";
 import { HomeProcess } from "./HomeProcess";
 import { HomeReady } from "./HomeReady";
-import { Footer } from "../../components/Footer";
 
 export function HomePage() {
   return (
     <>
       <HomeHero />
-      <HomeAbout />
-      <HomeServices />
-      <HomeWhy />
+      <HomeWork />
+      <HomeCapabilities />
+      <HomeProblem />
       <HomeProcess />
       <HomeReady />
       <Footer />
