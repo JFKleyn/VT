@@ -179,9 +179,12 @@ export function AboutPage() {
             {principles.map((principle, index) => (
               <Reveal as="article" key={principle.number} delay={index * 60}>
                 <span>{principle.number}</span>
-                <h3>{principle.title}</h3>
+                <h3>{principle.title}                <b className="arrow-icons" aria-hidden="true">
+                    <svg viewBox="0 0 20 20">
+                      <path d="M5 15L15 5M7 5h8v8" />
+                    </svg>
+                </b></h3>
                 <p>{principle.text}</p>
-                <i>↗</i>
               </Reveal>
             ))}
           </div>

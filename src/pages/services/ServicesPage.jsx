@@ -132,11 +132,11 @@ function ServiceVisual({ type, number }) {
         )}
         {type === "automation" && (
           <>
-            <span className="sv-node sv-node--a">01</span>
-            <span className="sv-node sv-node--b">02</span>
-            <span className="sv-node sv-node--c">03</span>
-            <svg className="sv-flow" viewBox="0 0 420 250">
-              <path d="M76 55 C165 55 125 190 220 190 S300 65 350 65" />
+            <div className="visual-node visual-node--one">01</div>
+            <div className="visual-node visual-node--two">02</div>
+            <div className="visual-node visual-node--three">03</div>
+            <svg className="visual-flow" viewBox="0 0 400 250">
+              <path d="M80 65 C175 65 125 185 220 185 S285 75 340 75" />
             </svg>
           </>
         )}
@@ -158,7 +158,7 @@ export function ServicesPage() {
 
   return (
     <>
-    <Header />
+      <Header />
       <main className="services-page">
         <section className="services-hero">
           <Reveal className="services-kicker">
@@ -194,9 +194,7 @@ export function ServicesPage() {
         </section>
 
         <section className="services-system">
-          <Reveal className="services-section-label">
-What we build
-          </Reveal>
+          <Reveal className="services-section-label">What we build</Reveal>
           <div className="services-system__grid">
             <div className="services-list">
               {services.map((service, index) => (
@@ -213,7 +211,11 @@ What we build
                     <i>{service.label}</i>
                     <strong>{service.title}</strong>
                   </span>
-                  <b>↗</b>
+                  <b className="arrow-icon" aria-hidden="true">
+                    <svg viewBox="0 0 20 20">
+                      <path d="M5 15L15 5M7 5h8v8" />
+                    </svg>
+                  </b>
                 </button>
               ))}
             </div>

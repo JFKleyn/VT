@@ -104,7 +104,6 @@ export function HomeWork() {
     <section className="home-work" id="selected-work">
       <div className="home-work__intro">
         <Reveal className="home-work__label">
-          <span>02</span>
           Selected work
         </Reveal>
 

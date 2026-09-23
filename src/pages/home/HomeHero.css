@@ -205,6 +205,8 @@
 }
 .solution-system__live {
   color: var(--cyan);
+  display: flex;
+  align-items: center;
 }
 .solution-system__live:before {
   content: "";

@@ -19,7 +19,7 @@ export function HomeHero() {
         <section className="venture-hero__content">
           <div className="venture-hero__eyebrow hero-reveal">
             <span className="venture-hero__status" />
-            Independent Technology Company · South Africa / Worldwide
+            Independent Software Company · South Africa / Worldwide
           </div>
           <h1 className="venture-hero__title">
             <span className="hero-reveal">Whatever the</span>
