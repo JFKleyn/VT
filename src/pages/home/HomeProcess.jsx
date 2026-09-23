@@ -16,7 +16,7 @@ export function HomeProcess() {
   return (
     <section className="home-process" id="process">
       <div className="home-process__intro">
-        <Reveal className="home-process__label"><span>05</span>How we work</Reveal>
+        <Reveal className="home-process__label">How we work</Reveal>
         <Reveal as="h2" direction="up" delay={80}>From uncertainty<br /><em>to something useful.</em></Reveal>
         <Reveal as="p" delay={150}>A clear, collaborative process that keeps the work focused and keeps you involved from the first conversation to launch.</Reveal>
         <Reveal className="home-process__status" delay={220}><i />One process. Built around the problem.</Reveal>

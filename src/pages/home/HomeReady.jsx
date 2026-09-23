@@ -22,7 +22,6 @@ export function HomeReady() {
       </div>
 
       <Reveal className="home-ready__label">
-        <span>06</span>
         Start a conversation
       </Reveal>
 

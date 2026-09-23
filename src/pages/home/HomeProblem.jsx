@@ -18,7 +18,6 @@ export function HomeProblem() {
     <section className="home-problem">
       <div className="home-problem__top">
         <Reveal className="home-problem__label">
-          <span>04</span>
           The Venture approach
         </Reveal>
 
