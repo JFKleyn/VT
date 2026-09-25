@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Reveal } from "../../components/Reveal";
 import { Footer } from "../../components/Footer";
+import { Helmet } from "react-helmet-async";
 import "./ServicesPage.css";
 import { Header } from "../../components/Header";
 
@@ -158,6 +159,50 @@ export function ServicesPage() {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Software Development & Digital Services | Venture Technologies
+        </title>
+
+        <meta
+          name="description"
+          content="Explore Venture Technologies' services including custom software development, websites, mobile applications, business automation and system integrations."
+        />
+
+        <link rel="canonical" href="https://venturetechnologies.co/services" />
+
+        <meta
+          property="og:title"
+          content="Software Development & Digital Services | Venture Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Custom software, websites, mobile applications and automations designed around real business problems."
+        />
+        <meta
+          property="og:url"
+          content="https://venturetechnologies.co/services"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Software Development & Digital Services | Venture Technologies"
+        />
+        <meta
+          name="twitter:description"
+          content="Custom software, websites, mobile applications and automations designed around real business problems."
+        />
+        <meta
+          name="twitter:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+      </Helmet>
       <Header />
       <main className="services-page">
         <section className="services-hero">
