@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Reveal } from "../../components/Reveal";
 import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
+import { Helmet } from "react-helmet-async";
 import founder from "../../assets/about/johan-kleyn.webp";
 import "./AboutPage.css";
 
@@ -39,6 +40,50 @@ function Arrow() {
 export function AboutPage() {
   return (
     <>
+      <Helmet>
+        <title>
+          About Venture Technologies | South African Technology Company
+        </title>
+
+        <meta
+          name="description"
+          content="Venture Technologies is an independent South African technology company building custom software, websites, mobile applications and digital solutions for businesses worldwide."
+        />
+
+        <link rel="canonical" href="https://venturetechnologies.co/about" />
+
+        <meta
+          property="og:title"
+          content="About Venture Technologies | Technology Company"
+        />
+        <meta
+          property="og:description"
+          content="Meet Venture Technologies, an independent South African technology company building thoughtful digital products for businesses at home and around the world."
+        />
+        <meta
+          property="og:url"
+          content="https://venturetechnologies.co/about"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Venture Technologies | Technology Company"
+        />
+        <meta
+          name="twitter:description"
+          content="An independent South African technology company building digital products for businesses at home and around the world."
+        />
+        <meta
+          name="twitter:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+      </Helmet>
       <Header />
       <main className="about-page">
         <section className="about-hero">
@@ -179,11 +224,14 @@ export function AboutPage() {
             {principles.map((principle, index) => (
               <Reveal as="article" key={principle.number} delay={index * 60}>
                 <span>{principle.number}</span>
-                <h3>{principle.title}                <b className="arrow-icons" aria-hidden="true">
+                <h3>
+                  {principle.title}{" "}
+                  <b className="arrow-icons" aria-hidden="true">
                     <svg viewBox="0 0 20 20">
                       <path d="M5 15L15 5M7 5h8v8" />
                     </svg>
-                </b></h3>
+                  </b>
+                </h3>
                 <p>{principle.text}</p>
               </Reveal>
             ))}

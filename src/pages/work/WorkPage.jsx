@@ -2,6 +2,7 @@ import mcss from "../../assets/work/mcss.webp";
 import pcib from "../../assets/work/pcib.webp";
 import sa from "../../assets/work/studio-amberleigh.webp";
 import ltl from "../../assets/work/love-to-learn.webp";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Reveal } from "../../components/Reveal";
 import { Header } from "../../components/Header";
@@ -55,7 +56,7 @@ const projects = [
       "A friendly digital experience designed to organise educational information and help families find what they need without friction.",
     services: ["Web design", "Development", "Content structure"],
     image: ltl,
-    url: "ltlprivatetutoring.co.za",
+    url: "https://ltlprivatetutoring.co.za",
     year: "2026",
     tone: "learn",
   },
@@ -140,6 +141,45 @@ function Project({ project, index }) {
 export function WorkPage() {
   return (
     <>
+      <Helmet>
+        <title>Projects & Digital Solutions | Venture Technologies</title>
+
+        <meta
+          name="description"
+          content="Explore projects by Venture Technologies, including custom software, business systems, websites and digital solutions built for real businesses."
+        />
+
+        <link rel="canonical" href="https://venturetechnologies.co/work" />
+
+        <meta
+          property="og:title"
+          content="Projects & Digital Solutions | Venture Technologies"
+        />
+        <meta
+          property="og:description"
+          content="A growing collection of custom software, websites and digital systems built by Venture Technologies to solve real business problems."
+        />
+        <meta property="og:url" content="https://venturetechnologies.co/work" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Projects & Digital Solutions | Venture Technologies"
+        />
+        <meta
+          name="twitter:description"
+          content="A growing collection of custom software, websites and digital systems built to solve real business problems."
+        />
+        <meta
+          name="twitter:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+      </Helmet>
       <Header />
       <main className="work-page">
         <section className="work-page__hero">

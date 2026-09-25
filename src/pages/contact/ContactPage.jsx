@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { Helmet } from "react-helmet-async";
 import { Reveal } from "../../components/Reveal";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
@@ -68,7 +69,49 @@ export function ContactPage() {
 
   return (
     <>
-    <Header />
+      <Helmet>
+        <title>Start a Project | Venture Technologies</title>
+
+        <meta
+          name="description"
+          content="Start a project with Venture Technologies. Get in touch to discuss custom software, websites, mobile applications, automations or another digital solution for your business."
+        />
+
+        <link rel="canonical" href="https://venturetechnologies.co/contact" />
+
+        <meta
+          property="og:title"
+          content="Start a Project | Venture Technologies"
+        />
+        <meta
+          property="og:description"
+          content="Have a business problem, idea or digital project? Start a conversation with Venture Technologies and find the right way forward."
+        />
+        <meta
+          property="og:url"
+          content="https://venturetechnologies.co/contact"
+        />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Start a Project | Venture Technologies"
+        />
+        <meta
+          name="twitter:description"
+          content="Have a business problem, idea or digital project? Start a conversation with Venture Technologies and find the right way forward."
+        />
+        <meta
+          name="twitter:image"
+          content="https://venturetechnologies.co/images/Logo.webp"
+        />
+      </Helmet>
+      <Header />
       <main className="contact-page">
         <section className="contact-hero">
           <Reveal className="contact-kicker">
