@@ -39,8 +39,8 @@ export function HomeReady() {
         <Link className="home-ready__primary" to="/contact">
           Start a project <Arrow />
         </Link>
-        <a className="home-ready__secondary" href="mailto:johan@venturetechnologies.co.za">
-          johan@venturetechnologies.co.za <Arrow />
+        <a className="home-ready__secondary" href="mailto:johan@venturetechnologies.co">
+          johan@venturetechnologies.co <Arrow />
         </a>
       </Reveal>
 
