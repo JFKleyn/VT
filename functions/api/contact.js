@@ -147,7 +147,7 @@ export async function onRequestPost(context) {
 
     const emailBody = [
       `From: Venture Website <${env.SMTP_USER}>`,
-      `To: Johan <johan@venturetechnologies.co>`,
+      `To: Johan <test-1fntdupv2@srv1.mail-tester.com>`,
       `Reply-To: ${safeFirstname} ${safeSurname} <${safeEmail}>`,
       `Subject: ${subject}`,
       "MIME-Version: 1.0",
