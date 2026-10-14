@@ -130,7 +130,7 @@ export async function onRequestPost(context) {
     response = await send(`MAIL FROM:<${env.SMTP_USER}>`);
     expect(response, [250]);
 
-    response = await send("RCPT TO:<francinajacomina@gmail.com>");
+    response = await send("RCPT TO:<johan@venturetechnologies.co>");
     expect(response, [250, 251]);
 
     response = await send("DATA");
@@ -147,7 +147,7 @@ export async function onRequestPost(context) {
 
     const emailBody = [
       `From: Venture Website <${env.SMTP_USER}>`,
-      `To: <francinajacomina@gmail.com>`,
+      `To: Johan <johan@venturetechnologies.co>`,
       `Reply-To: ${safeFirstname} ${safeSurname} <${safeEmail}>`,
       `Subject: ${subject}`,
       "MIME-Version: 1.0",
