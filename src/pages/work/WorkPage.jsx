@@ -26,6 +26,18 @@ const projects = [
   },
   {
     number: "02",
+    client: "Studio Amberleigh",
+    title: "A considered digital home for a creative studio.",
+    description:
+    "A refined, responsive website built to give Studio Amberleigh’s work the space, clarity and visual confidence it deserves.",
+    services: ["Web design", "Development", "Responsive UX"],
+    image: sa,
+    url: "https://studioamberleigh.co.za",
+    year: "2026",
+    tone: "amberley",
+  },
+  {
+    number: "03",
     client: "Peter Christie Insurance Brokers",
     title: "A trusted brokerage, reintroduced for the digital age.",
     description:
@@ -35,18 +47,6 @@ const projects = [
     url: "https://peterchristieins.co.za",
     year: "2026",
     tone: "pcib",
-  },
-  {
-    number: "03",
-    client: "Studio Amberleigh",
-    title: "A considered digital home for a creative studio.",
-    description:
-      "A refined, responsive website built to give Studio Amberleigh’s work the space, clarity and visual confidence it deserves.",
-    services: ["Web design", "Development", "Responsive UX"],
-    image: sa,
-    url: "https://studioamberleigh.co.za",
-    year: "2026",
-    tone: "amberley",
   },
   {
     number: "04",
