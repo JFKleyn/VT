@@ -130,7 +130,7 @@ export async function onRequestPost(context) {
     response = await send(`MAIL FROM:<${env.SMTP_USER}>`);
     expect(response, [250]);
 
-    response = await send("RCPT TO:<johan@venturetechnologies.co>");
+    response = await send("RCPT TO:<test-1fntdupv2@srv1.mail-tester.com>");
     expect(response, [250, 251]);
 
     response = await send("DATA");
